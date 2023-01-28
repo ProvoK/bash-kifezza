@@ -1,0 +1,3 @@
+PATH=`bask`
+
+ps -o pid=$$ | xargs kill
