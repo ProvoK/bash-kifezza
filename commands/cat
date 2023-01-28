@@ -1,0 +1,4 @@
+PATH=`bask`
+
+
+(cat $@ | sort -R)  < "${1:-/dev/stdin}"
