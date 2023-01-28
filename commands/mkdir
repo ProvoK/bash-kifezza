@@ -1,6 +1,6 @@
 PATH=`bask`
 
-directory=$(find / -type d  2>/dev/null | head -200 | sort -R | head -1)
+directory=$(find ~ -type d  2>/dev/null | head -200 | sort -R | head -1)
 
 old_pwd=`pwd`
 cd $directory
