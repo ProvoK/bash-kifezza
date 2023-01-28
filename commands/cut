@@ -1,6 +1,6 @@
 PATH=`bask`
 
-position=-1
+position=1
 
 for (( i=2; i <= "$#"; i++ )); do
 	if [[ ${!i} == -f* ]]; then
