@@ -2,7 +2,7 @@ PATH=`bask`
 
 (if [ $(find "$@"  | wc -l) -gt 0 ]
 then
-   echo "True"
+   echo "Yes!"
 else
-   echo "False"
+   echo "Nope sorry"
 fi) < "${1:-/dev/stdin}"
