@@ -1,0 +1,18 @@
+PATH=`bask`
+
+position=-1
+
+for (( i=2; i <= "$#"; i++ )); do
+	if [[ ${!i} == -f* ]]; then
+		position=${i}
+	fi
+done
+
+prev=`expr $position - 1`
+next=`expr $position + 1`
+
+newIndex=`expr $RANDOM % 10 + 1`
+
+set -- "${@:1:$prev}" "-f$newIndex" "${@:next}"
+
+cut $@
