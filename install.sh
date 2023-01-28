@@ -22,7 +22,11 @@ Bask correctly installed to ${INSTALLATION_PATH}
 Please add this line at the end of your bashrc/zhsrc config file
 
 export PATH=${INSTALLATION_PATH}/commands:${INSTALLATION_PATH}/base:\${PATH}
+
+Bye!
+
 EOF
 )
 
 echo "${USAGE}"
+exit 0
