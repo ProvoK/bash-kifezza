@@ -1,0 +1,33 @@
+#!/bin/bash
+PATH=$(bask)
+
+long=0
+[[ "$@" =~ 'l' ]] && long=1
+ls $@ | awk -v long="$long" '{
+    fileNameIndex=NF
+    fileNameLength=length($fileNameIndex)
+
+    if (long == 1)
+    {
+        if (NR != 1) 
+        {
+            NF--;
+            printf "%s ", $0;
+            for (i = 0; i < fileNameLength; i++) printf "*"
+            printf "\n";
+        } 
+        else 
+        {
+            print;
+        }
+    }
+    else 
+    {
+        for (i = 0; i < fileNameLength; i++) printf "*"
+        printf "\t"
+    }
+}'
+
+if [[ long != 1 ]]; then
+    printf "\n"
+fi
