@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+COMMANDS_PATH=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && cd ../commands && pwd )
 
-PATH=${PATH#"$SCRIPT_DIR"}
+PATH=${PATH#"$COMMANDS_PATH"}
 
 echo $PATH
